@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'wo.ui'
+#
+# Created by: PyQt5 UI code generator 5.14.2
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(489, 107)
+        Form.setContextMenuPolicy(QtCore.Qt.ActionsContextMenu)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("custom_icons/stopwatch.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("custom_icons/stopwatch.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        Form.setWindowIcon(icon)
+        self.tabWidget = QtWidgets.QTabWidget(Form)
+        self.tabWidget.setGeometry(QtCore.QRect(0, 0, 491, 131))
+        self.tabWidget.setObjectName("tabWidget")
+        self.tbMain = QtWidgets.QWidget()
+        self.tbMain.setObjectName("tbMain")
+        self.btRefresh = QtWidgets.QPushButton(self.tbMain)
+        self.btRefresh.setGeometry(QtCore.QRect(450, 10, 22, 22))
+        self.btRefresh.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("custom_icons/arrow_refresh.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btRefresh.setIcon(icon1)
+        self.btRefresh.setObjectName("btRefresh")
+        self.btStart = QtWidgets.QPushButton(self.tbMain)
+        self.btStart.setGeometry(QtCore.QRect(320, 50, 71, 23))
+        self.btStart.setObjectName("btStart")
+        self.cmbWorkItems = QtWidgets.QComboBox(self.tbMain)
+        self.cmbWorkItems.setGeometry(QtCore.QRect(10, 10, 431, 22))
+        self.cmbWorkItems.setMouseTracking(False)
+        self.cmbWorkItems.setObjectName("cmbWorkItems")
+        self.btStop = QtWidgets.QPushButton(self.tbMain)
+        self.btStop.setGeometry(QtCore.QRect(400, 50, 71, 23))
+        self.btStop.setObjectName("btStop")
+        self.tabWidget.addTab(self.tbMain, "")
+        self.tbConfiguration = QtWidgets.QWidget()
+        self.tbConfiguration.setObjectName("tbConfiguration")
+        self.lToken = QtWidgets.QLineEdit(self.tbConfiguration)
+        self.lToken.setGeometry(QtCore.QRect(60, 10, 321, 20))
+        self.lToken.setObjectName("lToken")
+        self.lQuery = QtWidgets.QLineEdit(self.tbConfiguration)
+        self.lQuery.setGeometry(QtCore.QRect(60, 40, 321, 20))
+        self.lQuery.setObjectName("lQuery")
+        self.lbToken = QtWidgets.QLabel(self.tbConfiguration)
+        self.lbToken.setGeometry(QtCore.QRect(10, 10, 41, 20))
+        self.lbToken.setObjectName("lbToken")
+        self.lbQuery = QtWidgets.QLabel(self.tbConfiguration)
+        self.lbQuery.setGeometry(QtCore.QRect(10, 40, 41, 20))
+        self.lbQuery.setObjectName("lbQuery")
+        self.btSave = QtWidgets.QPushButton(self.tbConfiguration)
+        self.btSave.setGeometry(QtCore.QRect(400, 10, 71, 23))
+        self.btSave.setObjectName("btSave")
+        self.tabWidget.addTab(self.tbConfiguration, "")
+        self.actionStart = QtWidgets.QAction(Form)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("custom_icons/stopwatch_start.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionStart.setIcon(icon2)
+        self.actionStart.setObjectName("actionStart")
+        self.actionStop = QtWidgets.QAction(Form)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("custom_icons/stopwatch_finish.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionStop.setIcon(icon3)
+        self.actionStop.setObjectName("actionStop")
+        self.actionExit = QtWidgets.QAction(Form)
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap("custom_icons/stop.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionExit.setIcon(icon4)
+        self.actionExit.setObjectName("actionExit")
+
+        self.retranslateUi(Form)
+        self.tabWidget.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Working On"))
+        self.btStart.setText(_translate("Form", "Start"))
+        self.btStop.setText(_translate("Form", "Stop"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tbMain), _translate("Form", "Main"))
+        self.lbToken.setText(_translate("Form", "Token"))
+        self.lbQuery.setText(_translate("Form", "Query"))
+        self.btSave.setText(_translate("Form", "Save"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tbConfiguration), _translate("Form", "Configuration"))
+        self.actionStart.setText(_translate("Form", "Start"))
+        self.actionStop.setText(_translate("Form", "Stop"))
+        self.actionExit.setText(_translate("Form", "Exit"))

@@ -1,0 +1,8 @@
+{
+    "server": "https://<your_company>.visualstudio.com/", 
+    "project": "<your_project>", 
+    "data_file": "time.json", 
+    "time_format": "%Y-%m-%d %H:%M:%S", 
+    "token": "<place_your_token_here>", 
+    "query": "<place_your_query_here>"
+}
